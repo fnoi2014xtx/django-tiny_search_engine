@@ -1,0 +1,175 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {{web_title}}
+    </title>
+    <style type="text/css">
+        body{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+			min-width:1000px;
+        }
+        ul.tutorial{
+            position: -webkit-sticky;
+            position: sticky;
+            top:0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0px;
+            background-color: #1E90FF;
+			z-index:1;
+        }
+        ul.tutorial>li{
+            float:left;
+        }
+        ul.tutorial>li>a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul.tutorial>li>a:hover:not(.active){
+            background-color:#4169E1;
+            color: white;
+        }
+        ul.tutorial>li>a.active{
+            color:#666;
+            background-color:
+        }
+        .title-bar{
+            display: block;
+            margin: 0 auto;
+            padding-left: 20%;
+            padding-right: 20%;
+            overflow: hidden;
+            text-align: left;
+			margin-top:50px;
+			margin-bottom:50px;
+        }
+        .title{
+            font:bold 250% "宋体";
+            text-align:left;
+			margin-bottom:20px;
+        }
+        .subtitle{
+            font-family: "宋体";
+            color:#666;
+        }
+        .main-body{
+			padding-left:20%;
+			padding-right:10%;
+            position: relative;
+            display: inline-block;
+			margin-bottom:50px;
+			margin-top:50px;
+        }
+        .left-body{
+            position: relative;
+            width: 80%;
+            display: inline;
+            float: left;
+            /*top:10%;
+            left: 10%;
+            width: 80%;*/
+        }
+        .right-body{
+            position: relative;
+            float:right;
+            display: inline;
+            /*top:10%;
+            right:10%;*/
+        }
+		.copyright{
+			width:100%;
+			text-align:center;
+			color:#999
+		}
+		.related-news-bar{
+			width:80%;
+			
+		}
+		.related-news>li{
+			decoration:none;
+		}
+		.related-news{
+			column-count:2;
+			list-style-type:none;
+			margin:auto 0;
+			padding:0;
+		}
+		.text>p{
+			font-size:20px;
+			font-family:"宋体";
+			text-indent:2em;
+		}
+		.related-news-bar>p{
+			font-size:30px;
+		}
+		.related-news>li>a{
+			display:block;
+			text-decoration:none;
+			color: #666;
+            word-break:keep-all;       /* 不换行 */
+            white-space:nowrap;        /* 不换行 */
+		    overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tutorial">
+        {%for Item in tutorial_list%}
+        <li><a href={{Item.url}}>{{Item.name}}</a></li>
+        {%endfor%}
+    </ul>
+    <div class="title-bar">
+        <div class="title">
+            {{title}}
+        </div>
+        <div class="subtitle">
+            {{subtitle}}
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="left-body">
+            <div class="text">
+                {%for Item in text%}
+                <p>
+                    {{Item}}
+                </p>
+                {%endfor%}
+            </div>
+            <div class="related-news-bar">
+                <p>
+                    相关新闻
+                </p>
+                <ul class="related-news">
+                    {%for Item in related_news%}
+                        <li>
+                            <a href={{Item.url}} target="_blank">
+                                {{Item.name}}
+                            </a>
+                        </li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class="right-body">
+            <div class="picture">
+                <img src='{% static "head_tiny.png"%}' width="150px",height="150px"/>
+                <p>fnoi2014xtx制作</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        SkyNet版权所有，未经书面授权禁止使用<br />
+        Copyright &copy; 2018-2019 by fnoi2014xtx. All rights reserved.
+    </div>
+</body>
+</html>

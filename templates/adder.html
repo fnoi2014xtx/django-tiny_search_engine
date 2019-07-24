@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>徐天行的加法器&nbsp;fnoi2014xtx's website</title>
+    <style>
+        ul.tutorial{
+            position: -webkit-sticky;
+            position: sticky;
+            top:0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0px;
+            background-color: #1E90FF;
+        }
+        ul.tutorial>li{
+            float:left;
+        }
+        ul.tutorial>li>a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul.tutorial>li>a:hover:not(.active){
+            background-color:#4169E1;
+            color: white;
+        }
+        ul.tutorial>li>a.active{
+            color:#666;
+            background-color: 
+        }
+    </style>
+</head>
+<body>
+    <ul class="tutorial">
+        {%for Item in tutorial_list%}
+        <li><a href={{Item.url}}>{{Item.name}}</a></li>
+        {%endfor%}
+    </ul>
+    <h1>
+        加法器，JS实现
+    </h1>
+    <script>
+        function add(){
+            x = document.getElementById("first_num").value;
+            y = document.getElementById("second_num").value;
+            alert(Number(x)+Number(y));
+            //z = document.getElementById("result");
+            //z.innerHTML = parseInt(x.innerHTML)+parseInt(y.innerHTML);
+            //alert(parseInt(x.innerHTML)+parseInt(y.innerHTML));
+        }
+    </script>
+    <form>
+        第一个数字<input type="text" id="first_num" value="0"><br>
+        第二个数字<input type="text" id="second_num" value="0"><br>
+        <button type="button" onclick="add()">
+            等于
+        </button>
+    </form>
+</html>

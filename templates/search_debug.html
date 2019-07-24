@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		python_百度搜索
+	</title>
+	<style type="text/css">
+		body{
+			width:100%;
+			display: block;
+			margin: 0 auto;
+			min-width: 1000px;
+		}     
+		ul.tutorial{
+            position: -webkit-sticky;
+            position: sticky;
+            top:0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0px;
+            background-color: #1E90FF;
+			z-index:1;
+        }
+        ul.tutorial>li{
+            float:left;
+        }
+        ul.tutorial>li>a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul.tutorial>li>a:hover:not(.active){
+            background-color:#4169E1;
+            color: white;
+        }
+        ul.tutorial>li>a.active{
+            color:#666;
+            background-color:
+        }
+        .copyright{
+			width:100%;
+			text-align:center;
+			color:#999
+		}
+		.result-data{
+			background-color:#eee;
+			padding-left: 20%;
+            padding-right: 20%;
+			height:40px;
+			color:#999;
+			line-height: 40px;
+		}
+        .main{
+            display: block;
+            width: 60%;
+            margin-left: 20%;
+            margin-right:20%;
+            margin-top:50px;
+            margin-bottom: 50px;
+        }
+        .news-box{
+            display: block;
+            padding-top: 10px;
+            padding-bottom:10px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .news-box>a{
+            font-size:20px;
+        }
+        .news-summary{
+            font-size:18px;
+        }
+        .page-rank{
+            list-style-type:none;
+            overflow:hidden;
+            border:0px;
+        }
+        .page-rank>li{
+            float:left;
+        }
+        .page-rank>li>a{
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+            text-decoration:none;
+            color:#000;
+            border-style: solid;
+            border-width: 1px;
+            border-color:#999;
+            font-size:20px;
+            float:left;
+            margin-left:10px;
+            margin-right:10px;
+        }
+	</style>
+</head>
+<body>
+	<ul class="tutorial">
+        <li><a href="http://127.0.0.1:8000">首页</a></li>
+    </ul>
+    <div class="result-data">
+    	天网为您找到相关结果{{search-count}}，共耗时{{search-time}}s。
+    </div>
+    <div class="main">
+    	<div class="news-boxes">
+    		<div class="news-box">
+    			<a href="http://www.baidu.com/link?url=4bvMmJRrdNjz5t06EZgrpja_RybyAjyAgOVsvn_9yk2kgKb2oJ5r6wvXioRsPNbthJSJOGJQWlroD_TIdvlUP_">
+                    Python</em> 简介 | 菜鸟教程    
+                </a>
+    			<div class="news-summary">
+    				<em>Python</em> 简介 <em>Python</em> 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 <em>Python</em> 的设计具有很强的可读性,相比其他语言经常使用英文关键字,其他语言...
+    			</div>
+            </div>
+            <div class="news-box">
+                <a href="http://www.baidu.com/link?url=4bvMmJRrdNjz5t06EZgrpja_RybyAjyAgOVsvn_9yk2kgKb2oJ5r6wvXioRsPNbthJSJOGJQWlroD_TIdvlUP_">
+                    Python</em> 简介 | 菜鸟教程    
+                </a>
+                <div class="news-summary">
+                    <em>Python</em> 简介 <em>Python</em> 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 <em>Python</em> 的设计具有很强的可读性,相比其他语言经常使用英文关键字,其他语言...
+                </div>
+            </div>
+            <div class="news-box">
+                <a href="http://www.baidu.com/link?url=4bvMmJRrdNjz5t06EZgrpja_RybyAjyAgOVsvn_9yk2kgKb2oJ5r6wvXioRsPNbthJSJOGJQWlroD_TIdvlUP_">
+                    Python</em> 简介 | 菜鸟教程    
+                </a>
+                <div class="news-summary">
+                    <em>Python</em> 简介 <em>Python</em> 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 <em>Python</em> 的设计具有很强的可读性,相比其他语言经常使用英文关键字,其他语言...
+                </div>
+    		</div>
+    	</div>
+    	<ul class="page-rank">
+			<li>
+				<a href="test">1 </a>
+			</li>
+            <li>
+                <a href="test">2 </a>
+            </li>
+            <li>
+                <a href="test">3 </a>
+            </li>
+            <li>
+                <a href="test">4 </a>
+            </li>
+    	</ul>
+    </div>
+    <div class="copyright">
+        SkyNet版权所有，未经书面授权禁止使用<br />
+        Copyright &copy; 2018-2019 by fnoi2014xtx. All rights reserved.
+    </div>
+</body>
+</html>
